@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:700|Muli&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  background-color: #042A38;
+  color: #F3F0E2;
+}
+
+.main-container {
+  width: 100vw;
+  max-width: 600px;
+  margin: 15px auto;
+}
+
+.container {
+
+}
+
+.header {
+  font-family: 'Lora', serif;
+  letter-spacing: 1.5px;
+  background-color: rgba(2, 32, 43, 0.85);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.header a {
+  font-size: 2.25rem;
+  text-decoration: none;
+  color: #F3F0E2;
+  padding: 5px 10px;
+}
+
+.date {
+  background-color: rgba(2, 32, 43, 0.98);
+  padding: 0.75rem 1rem 0.75rem 0;
+  text-align: right;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+ul.currencies {
+  height: 70vh;
+  background-color: rgba(2, 32, 43, 0.85);
+  background-color: rgba(2, 32, 43, 0.88);
+}
+
+.add-btn {
+  width: -webkit-fill-available;
+  height: 10vh;
+  font-size: 1.2rem;
+  background-color: rgba(6, 128, 91, 0.904);
+  border-color: rgba(2, 32, 43, 0.88);
+  color: #F3F0E2;
+}

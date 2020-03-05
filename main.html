@@ -5,12 +5,24 @@
   <meta name="viewport" content="width=
   , initial-scale=1.0">
   <title>Calculator | Currency Converter</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <div class="container">
-    <div class="calculator Container"></div>
-    <div class="currency Container"></div>
+  <div class="main-container">
+    <header class="header">
+      <a class="header-nav" href="#calculator">Calculator</a>
+      <a class="header-nav" href="#converter">Converter</a>
+    </header>
+    
+    <div id="calculator" class="container"></div>
+
+    <div id="converter" class="container">
+      <div class="date">2020-03-06</div>
+      <ul class="currencies"></ul>
+      <ul class="all-currencies-list"></ul>
+      <button class="add-btn">Add Currency</button>
+    </div>
+
   </div>
   <script type="module" src="js/main.js"></script>
 </body>

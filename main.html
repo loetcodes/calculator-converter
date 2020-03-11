@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=
-  , initial-scale=1.0">
+  <meta name="viewport" content="width= device-width, initial-scale=1.0">
   <title>Calculator | Currency Converter</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -12,14 +11,46 @@
     <header class="header">
       <a class="header-nav calculatorTitle" href="#calculator">Calculator</a>
       <a class="header-nav converterTitle" href="#converter">Converter</a>
-    </header>    
+    </header>
+
     <div id="calculator" class="container"></div>
+
     <div id="converter" class="container">
       <div class="date">2020-03-06</div>
-      <ul class="currencies"></ul>
+      <ul class="currencies">
+        <!-- usd dollars -->
+        <li class="currency-card card-layout" id="usd">
+          <!-- Country details -->
+          <div class="country-info">
+            <p class="country-name">USA</p>
+            <img class="flag" src="http://www.geonames.org/flags/l/us.gif" alt="Country Flag">
+          </div>
+          <!-- Currency info -->
+          <div class="symbol-info">
+            <span class="currency-symbol">&#36;</span>
+            <p class="symbol-name">dollar</p>
+          </div>
+          <!-- Conversion amount -->
+          <div class="amount-info">
+            <label class="input-label"> Amount
+              <p class="input-text"><input placeholder="0.000"></p>
+            </label>
+            <p class="base-rate">
+              1 <span class="currency-code">USD</span> 
+              = <span class="base-convert">1</span><span class="base_currency">USD</span>
+            </p>
+          </div>
+          <!-- Close item -->
+          <div class="close"><span>&times;</span></div>
+        </li>
+
+      </ul>
+
+
       <ul class="all-currencies-list"></ul>
       <button class="add-btn">Add Currency</button>
     </div>
+
   </div>
   <script type="module" src="js/main.js"></script>
 </body>

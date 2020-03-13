@@ -19,7 +19,7 @@
       <div class="date">2020-03-06</div>
       <ul class="currencies">
         <!-- usd dollars -->
-        <li class="currency-card card-layout" id="usd">
+        <li class="currency-card card-layout base-currency" id="usd">
           <!-- Country details -->
           <div class="country-info">
             <p class="country-name">USA</p>
@@ -30,25 +30,111 @@
             <span class="currency-symbol">&#36;</span>
             <p class="symbol-name">dollar</p>
           </div>
-          <!-- Conversion amount -->
+          <!-- Conversion amount and rate-->
           <div class="amount-info">
             <label class="input-label"> Amount
               <p class="input-text"><input placeholder="0.000"></p>
             </label>
-            <p class="base-rate">
-              1 <span class="currency-code">USD</span> 
-              = <span class="base-convert">1</span><span class="base_currency">USD</span>
-            </p>
+            <p class="currency-conversion">1 USD = 1.00 USD</p>
+          </div>
+          <!-- Close item -->
+          <div class="close"><span>&times;</span></div>
+        </li>
+
+        <!-- Euro -->
+        <li class="currency-card card-layout" id="usd">
+          <!-- Country details -->
+          <div class="country-info">
+            <p class="country-name">Finland</p>
+            <img class="flag" src="http://www.geonames.org/flags/l/fi.gif" alt="Country Flag">
+          </div>
+          <!-- Currency info -->
+          <div class="symbol-info">
+            <span class="currency-symbol">&euro;</span>
+            <p class="symbol-name">euro</p>
+          </div>
+          <!-- Conversion amount and rate-->
+          <div class="amount-info">
+            <label class="input-label"> Amount
+              <p class="input-text"><input placeholder="0.000"></p>
+            </label>
+            <p class="currency-conversion">1 USD = 0.90 EUR</p>
+          </div>
+          <!-- Close item -->
+          <div class="close"><span>&times;</span></div>
+        </li>
+
+        <!-- Canadian dollar -->
+        <li class="currency-card card-layout" id="usd">
+          <!-- Country details -->
+          <div class="country-info">
+            <p class="country-name">Canada</p>
+            <img class="flag" src="http://www.geonames.org/flags/l/ca.gif" alt="Country Flag">
+          </div>
+          <!-- Currency info -->
+          <div class="symbol-info">
+            <span class="currency-symbol">&#36;</span>
+            <p class="symbol-name">dollar</p>
+          </div>
+          <!-- Conversion amount and rate-->
+          <div class="amount-info">
+            <label class="input-label"> Amount
+              <p class="input-text"><input placeholder="0.000"></p>
+            </label>
+            <p class="currency-conversion">1 USD = 1.38 CAD</p>
+          </div>
+          <!-- Close item -->
+          <div class="close"><span>&times;</span></div>
+        </li>
+
+        <!-- South African Rand -->
+        <li class="currency-card card-layout" id="usd">
+          <!-- Country details -->
+          <div class="country-info">
+            <p class="country-name">South Africa</p>
+            <img class="flag" src="http://www.geonames.org/flags/l/za.gif" alt="Country Flag">
+          </div>
+          <!-- Currency info -->
+          <div class="symbol-info">
+            <span class="currency-symbol">&#82;</span>
+            <p class="symbol-name">rand</p>
+          </div>
+          <!-- Conversion amount and rate-->
+          <div class="amount-info">
+            <label class="input-label"> Amount
+              <p class="input-text"><input placeholder="0.000"></p>
+            </label>
+            <p class="currency-conversion">1 USD = 16.20 ZAR</p>
           </div>
           <!-- Close item -->
           <div class="close"><span>&times;</span></div>
         </li>
 
       </ul>
-
-
-      <ul class="all-currencies-list"></ul>
       <button class="add-btn">Add Currency</button>
+      <!-- List for selecting currencies -->
+      <ul class="all-currencies-list listings">
+        <li class="currency-item">
+          <img src="http://www.geonames.org/flags/l/au.gif" alt="country flag" class="flag">
+          <span class="currency-code">AUD - Australian Dollar</span>
+        </li>
+        <li class="currency-item">
+          <img src="http://www.geonames.org/flags/l/ae.gif" alt="country flag" class="flag">
+          <span class="currency-code">AED - United Arab Emirates Dirham</span>
+        </li>
+        <li class="currency-item">
+          <img src="http://www.geonames.org/flags/l/jp.gif" alt="country flag" class="flag">
+          <span class="currency-code">JPY - Japanese Yen</span>
+        </li>
+        <li class="currency-item">
+          <img src="http://www.geonames.org/flags/l/rw.gif" alt="country flag" class="flag">
+          <span class="currency-code">RWF - Rwandan Franc</span>
+        </li>
+        <li class="currency-item">
+          <img src="http://www.geonames.org/flags/l/se.gif" alt="country flag" class="flag">
+          <span class="currency-code">SEK - Swedish Krona</span>
+        </li>
+      </ul>
     </div>
 
   </div>

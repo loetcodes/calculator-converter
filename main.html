@@ -8,18 +8,12 @@
 </head>
 <body>
   <div class="main-container">
-    <header class="header">
-      <a class="header-nav calculatorTitle" href="#calculator">Calculator</a>
-      <a class="header-nav converterTitle" href="#converter">Converter</a>
-    </header>
+    <nav class="header">
+      <button class="header-nav converterTitle" href="#converter">Converter</button>
+      <button class="header-nav calculatorTitle" href="#calculator">Calculator</button>
+    </nav>
 
-    <div id="calculator" class="container">
-      <div><span>1</span></div>
-      <div><span>1</span></div>
-      <div><span>1</span></div>
-      <div><span>1</span></div>
-    </div>
-
+    <!-- Converter Section -->
     <div id="converter" class="container">
       <div class="date">2020-03-06</div>
       <ul class="currencies">
@@ -144,6 +138,34 @@
           <span class="currency-code">USD - United States Dollar</span>
         </li>
       </ul>
+    </div>
+
+    <!-- Calculator Section -->
+    <div id="calculator" class="container">
+      <!-- Results window -->
+      <div class="results-window">
+      </div>
+      <div class="key-operators">
+        <button class="operator" id="/">&#247;</button>
+        <button class="operator" id="*">&times;</button>
+        <button class="operator" id="-">-</button>
+        <button class="operator" id="+">+</button>
+        <button class="operator" id="+-">&plusmn;</button>
+      </div>
+      <!-- Keypad buttons -->
+      <div class="keypad">
+        <button id="7" class="keypad-number">7</button>
+        <button id="8" class="keypad-number">8</button>
+        <button id="9" class="keypad-number">9</button>
+        <button id="4" class="keypad-number">4</button>
+        <button id="5" class="keypad-number">5</button>
+        <button id="6" class="keypad-number">6</button>
+        <button id="1" class="keypad-number">1</button>
+        <button id="2" class="keypad-number">2</button>
+        <button id="3" class="keypad-number">3</button>
+        <button id="0" class="keypad-number">0</button>
+      </div>
+      <!-- Equals sign -->
     </div>
 
   </div>

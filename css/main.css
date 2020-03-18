@@ -18,6 +18,7 @@
   --color4: #747474;
   --button_background1: #270058;
   --button_background2: #006b79;
+  --button_light: #d4d4d4;
   --button_color: #e2e2e2;
   --card_tile: #505050;
   /* --card_tile: #d5d5d5; */
@@ -60,12 +61,17 @@ body {
   height: 10vh;
 }
 
-.feature-window {
+.content-window {
   display: flex;
   width: 200%;
   height: 88vh;
   position: absolute;
-  /* flex-direction: row-reverse; */
+  left: 0%;
+  transition: all 0.5s;
+}
+
+.slide-right {
+  left: -100%;
 }
 
 .header button {
@@ -88,7 +94,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ececec;
-  transition: all 0.5s;
   align-items: center;
 }
 
@@ -103,7 +108,6 @@ body {
   border-color: var(--main_color);
   margin: 0% auto;
   border: 0;
-  /* background-image: linear-gradient(90deg,#e6e6e6, #747474, #e6e6e6); */
   background-image: linear-gradient(90deg, var(--container_background), 
   var(--color4), var(--container_background));
 }
@@ -122,14 +126,29 @@ body {
 }
 
 .pad-row button {
-  width: 20%;
-  height: 80%;
+  width: 15%;
+  height: 75%;
   color: var(--color4, #747474);
   font-size: 2.0rem;
   font-weight: 600;
   border: none;
-  border-radius: 50px;
+  border-radius: 50%;
   background-color: transparent;
+  transition: all ease-in 0.25s;
+}
+
+.pad-row button:hover {
+  background-color: var(--button_light, #d4d4d4);
+}
+
+.pad-row .operator {
+  background-color: var(--button_background2, #006b79);
+  color: var(--color1, #e2e2e2);
+}
+
+.pad-row .operator:hover {
+  background-color: var(--button_background1, #270058);
+  color: var(--color1, #e2e2e2);
 }
 
 #converter.container {

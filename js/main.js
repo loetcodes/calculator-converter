@@ -26,6 +26,16 @@ showCurrencies.addEventListener("click", function () {
   }
 });
 
+// Add functionality to the buttons.
+const calculatorButtons = document.querySelectorAll('.btn');
+calculatorButtons.forEach((btn) => {
+  // let element = btn;
+  btn.addEventListener("click", function () {
+    let resultsDisplay = document.getElementById("current-calc");
+    resultsDisplay.innerHTML += btn.innerHTML;
+  })
+});
+
 const addClass = (element, classItem) => {
   // Adds a given class to an element.
   if (!element.classList.contains(classItem)) {
@@ -44,6 +54,17 @@ const changeContent = (element, newText) => {
   // Changes the inner content of an element.
   element.innerHTML = newText;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

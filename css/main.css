@@ -18,6 +18,7 @@
   --color4: #747474;
   --button_background1: #270058;
   --button_background2: #006b79;
+  --button_hover: #006b79ec;
   --button_light: #d4d4d4;
   --button_color: #e2e2e2;
   --card_tile: #505050;
@@ -98,9 +99,27 @@ body {
   align-items: center;
 }
 
-.results-window {
+.display-box {
   width: 90%;
   height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 2.8rem;
+}
+
+.display-box .history {
+  width: 100%;
+  height: 50%;
+  font-size: 1.4rem;
+}
+
+.display-box .current {
+  width: 98%;
+  align-self: flex-end;
+  margin: 2%;
+  text-align: right;
+  overflow-wrap: break-word;
 }
 
 .line-divider {
@@ -328,14 +347,9 @@ ul::-webkit-scrollbar-thumb {
   z-index: 3;
 }
 
-/* .add-btn:hover {
-  background-color: var(--button_background2, #006b79);
+.add-btn:hover {
+  background-color: var(--button_hover, #006b79ec);
 }
-
-.add-btn:hover + .all-currencies-list {
-  left: 0%;
-  opacity: 1;
-} */
 
 .add-btn.opened {
   background-color: var(--button_background2, #006b79);

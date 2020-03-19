@@ -3,29 +3,46 @@
 // Displays the calculator
 const displayCalculator = document.getElementById("calculator-btn");
 displayCalculator.addEventListener("click", () => {
-  addClass("feature-content", "slide-right");
+  let element = document.getElementById("feature-content");
+  addClass(element, "slide-right");
 });
 
 // Displays the converter
 const displayConverter = document.getElementById("converter-btn");
 displayConverter.addEventListener("click", () => {
-  removeClass("feature-content", "slide-right");
+  let element = document.getElementById("feature-content");
+  removeClass(element, "slide-right");
 });
 
-const addClass = (elementId, classItem) => {
+// Toggles the currency list visible or invisible.
+const showCurrencies = document.getElementById("currency-list-btn");
+showCurrencies.addEventListener("click", function () {
+  if (this.classList.contains("opened")) {
+    removeClass(this, "opened");
+    changeContent(this, "Add Currency");
+  } else {
+    addClass(this, "opened");
+    changeContent(this, "Done");
+  }
+});
+
+const addClass = (element, classItem) => {
   // Adds a given class to an element.
-  let element = document.getElementById(elementId);
   if (!element.classList.contains(classItem)) {
     element.classList.add(classItem);
   }
 }
 
-const removeClass = (elementId, classItem) => {
+const removeClass = (element, classItem) => {
   // Removes a given class from an element.
-  let element = document.getElementById(elementId);
   if (element.classList.contains(classItem)) {
     element.classList.remove(classItem);
   }
+}
+
+const changeContent = (element, newText) => {
+  // Changes the inner content of an element.
+  element.innerHTML = newText;
 }
 
 

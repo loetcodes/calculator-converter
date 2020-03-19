@@ -129,21 +129,21 @@ body {
 .pad-row button {
   width: 15%;
   height: 75%;
-  color: var(--color4, #747474);
   font-size: 2.0rem;
   font-weight: 600;
   border: none;
   border-radius: 50%;
   background-color: transparent;
+  color: var(--color4, #747474);
   transition: all ease-in 0.25s;
-}
-
-.pad-row .number {
-  box-shadow: 4px 4px 8px var(--number_shadow, #afafaf);
 }
 
 .pad-row button:hover {
   background-color: var(--button_light, #d4d4d4);
+}
+
+.pad-row .number {
+  box-shadow: 4px 4px 8px var(--number_shadow, #afafaf);
 }
 
 .pad-row .operator {
@@ -328,20 +328,20 @@ ul::-webkit-scrollbar-thumb {
   z-index: 3;
 }
 
-.add-btn:hover {
+/* .add-btn:hover {
   background-color: var(--button_background2, #006b79);
 }
 
 .add-btn:hover + .all-currencies-list {
   left: 0%;
   opacity: 1;
-}
+} */
 
-/* .add-btn.opened {
+.add-btn.opened {
   background-color: var(--button_background2, #006b79);
 }
 
 .add-btn.opened + .all-currencies-list {
   left: 0%;
   opacity: 1;
-} */
+}

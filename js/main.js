@@ -27,7 +27,7 @@ showCurrencies.addEventListener("click", function () {
 });
 
 // Add functionality to the buttons.
-const calculatorButtons = document.querySelectorAll('.btn');
+const calculatorButtons = document.querySelectorAll('.calc-btn');
 calculatorButtons.forEach((btn) => {
   // let element = btn;
   btn.addEventListener("click", function () {

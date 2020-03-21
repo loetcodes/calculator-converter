@@ -12,6 +12,7 @@
   --main_background: #ececec;
   --container_background: #e6e6e6;
   --main_color: #737373;
+  --main_color2: #5b5b5b;
   --color1: #e2e2e2;
   --color2: #e2e2e2;
   --color3: #000000;
@@ -22,7 +23,6 @@
   --button_light: #d4d4d4;
   --button_color: #e2e2e2;
   --card_tile: #505050;
-  /* --card_tile: #d5d5d5; */
   --input_box: #c4c4c4;
   --max_container: 600px;
   --number_shadow: #afafaf;
@@ -105,7 +105,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  font-size: 2.8rem;
+  font-size: 3.6rem;
+  color: var(--main_color2, #5b5b5b);
 }
 
 .display-box .history {

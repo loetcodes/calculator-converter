@@ -1,4 +1,4 @@
-// GeneralCommon JS functions in use by both Calculator or Currency Converter.
+// GeneralCommon JS functions in use by both Calculator, Currency Converter.
 
 
 export const addClass = (element, classItem) => {
@@ -19,5 +19,6 @@ export const changeContent = (element, newText) => {
   // Changes the inner content of an element.
   element.innerHTML = newText;
 }
+
 
 

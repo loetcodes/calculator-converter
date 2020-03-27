@@ -120,6 +120,21 @@ body {
   overflow-wrap: break-word;
 }
 
+.display-box .history .calc-answer {
+  margin-bottom: 1%;
+  padding: 2% 0;
+  border-bottom: 1px solid #e2e2e2ec;
+}
+
+.display-box .history .calc-answer:last-child {
+  font-size: 2.0rem;
+}
+
+.display-box .history .calc-answer div:nth-child(2) {
+  color: var(--button_background2);
+  font-weight: bold;
+}
+
 .display-box .current {
   width: 98%;
   align-self: flex-end;

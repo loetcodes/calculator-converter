@@ -24,16 +24,16 @@ calculatorButtons.forEach((btn) => {
 const equalsCaller = document.getElementById("evaluate");
 equalsCaller.addEventListener("click", () => {
   // Fetch the expression.
-  let expr = document.getElementById("calc-current").innerHTML;
-  console.log("Expression to be evaluated is: ", expr);
+  let exprDiv = document.getElementById("calc-current");
+  let expr = exprDiv.innerHTML;
   // Evaluate the expression.
   let exprAnswer = evaluateExpression(expr);
-  // Write result of calculation to display.
-  let displayAnswer = document.getElementById("calc-current");
-  displayAnswer.innerHTML = exprAnswer;
-  // Write calculation expression to history window.
+  // Write result of calculation.
   let historyCalc = document.getElementById("calc-history");
-  historyCalc.innerHTML += expr;
+  let calcItem = calcHistoryDiv(expr, exprAnswer);
+  historyCalc.appendChild(calcItem);
+  // Set expression to empty.
+  Utils.changeContent(exprDiv, " ");
 });
 
 
@@ -50,4 +50,17 @@ const evaluateExpression = (expr) => {
   // Evaluates the expression
   console.log("Evaluating the expression", expr);
   return "Evaluated!";
+}
+
+const calcHistoryDiv = (expr, answer) => {
+  // Creates a div element with the expression and answer
+  let calcExpression = document.createElement("DIV");
+  calcExpression.innerHTML = expr;
+  let calcAnswer = document.createElement("DIV");
+  calcAnswer.innerHTML = answer;
+  let outerDiv = document.createElement("DIV");
+  outerDiv.classList.add("calc-answer");
+  outerDiv.appendChild(calcExpression);
+  outerDiv.appendChild(calcAnswer);
+  return outerDiv;
 }

@@ -36,20 +36,37 @@ equalsCaller.addEventListener("click", () => {
   Utils.changeContent(exprDiv, " ");
 });
 
+// Clear All characters functionality.
+const clearExpression = document.getElementById("AC");
+clearExpression.addEventListener("click", () => {
+  // Empty the content of current window and the history.
+  let resultsDisplay = document.getElementById("calc-current");
+  Utils.changeContent(resultsDisplay, " ");
+});
+
+
+// Clear One character functionality.
+const clearCharacter = document.getElementById("C");
+clearCharacter.addEventListener("click", () => {
+  // Delete the last character
+  let resultsDisplay = document.getElementById("calc-current");
+  let exprText = resultsDisplay.innerHTML;
+  let newContent = exprText.substring(0, exprText.length - 1);
+  Utils.changeContent(resultsDisplay, newContent);
+});
+
 
 // PlusMinus functionality.
 
 
-// Clear One character functionality.
 
 
-// clear all characters functionality.
 
 
 const evaluateExpression = (expr) => {
   // Evaluates the expression
   console.log("Evaluating the expression", expr);
-  return "Evaluated!";
+  return expr;
 }
 
 const calcHistoryDiv = (expr, answer) => {

@@ -1,44 +1,58 @@
 // JS for the calculator.
 
 import * as Utils from "./utils.js";
+import {Operations, operatorItems} from "./operations.js";
 
-
-// Calculator object
-// const calculatorObj = {
-//   displayValue : '0',
-//   firstValue : null,
-//   waitState : false,
-//   operator : null
-// };
-
-// Calculator operations.
-class Operations {
-  add = (a, b) => {
-    return a + b;
-  }
-  
-}
-
-
-// Displays the calculator
+// Displays the calculator window
 const displayCalculator = document.getElementById("calculator-btn");
 displayCalculator.addEventListener("click", () => {
   let element = document.getElementById("feature-content");
   Utils.addClass(element, "slide-right");
 });
 
+// Calculator object
+const calculatorObj = {
+  displayValue : '0',
+  firstValue : null,
+  waitState : false,
+  operator : null
+};
 
-// Add functionality to the calculator buttons.
-const calculatorButtons = document.querySelectorAll('.calc-btn');
-calculatorButtons.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    let resultsDisplay = document.getElementById("calc-current");
-    resultsDisplay.innerHTML += btn.innerHTML;
-  })
-});
-
-// Declare a new calculator class
+// Declare a calculator class and operator levels.
 var operations = new Operations();
+var operatorItems = new OperatorItems(operations);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Add functionality to the calculator buttons.
+// const calculatorButtons = document.querySelectorAll('.calc-btn');
+// calculatorButtons.forEach((btn) => {
+//   btn.addEventListener("click", function () {
+//     let resultsDisplay = document.getElementById("calc-current");
+//     resultsDisplay.innerHTML += btn.innerHTML;
+//   })
+// });
+
+
 
 
 

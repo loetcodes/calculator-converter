@@ -1,4 +1,4 @@
-// Basic Calculator Operations
+// Arithmetic Operations
 
 export class Operations {
   add = (a, b) => {
@@ -37,28 +37,3 @@ export class Operations {
   }
 }
 
-// Operator levels BODMAS/PEMDAS
-// export class OperatorItems {
-//   constructor(Operations) {
-//     this.add = {
-//       level: 1,
-//       operation: Operations.add
-//     }
-//     this.subtract = {
-//       level: 1,
-//       operation: Operations.subtract
-//     }
-//     this.multiply = {
-//       level: 2,
-//       operation: Operations.multiply
-//     }
-//     this.divide = {
-//       level: 2,
-//       operation: Operations.divide
-//     }
-//     this.modulus = {
-//       level: 2,
-//       operation: Operations.modulus
-//     }
-//   }
-// }

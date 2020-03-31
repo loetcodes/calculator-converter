@@ -1,7 +1,29 @@
 // JS for the calculator.
 
 import * as Utils from "./utils.js";
-import {Operations, operatorItems} from "./operations.js";
+import { Operations } from "./operations.js";
+
+
+// Calculator class
+class Calculator {
+  constructor(operations) {
+    this.expression = [];
+    this.counter = null;
+    this.stringExpression = "";
+    this.result = 0;
+    this.operations = operations;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 // Displays the calculator window
 const displayCalculator = document.getElementById("calculator-btn");
@@ -10,17 +32,17 @@ displayCalculator.addEventListener("click", () => {
   Utils.addClass(element, "slide-right");
 });
 
-// Calculator object
-const calculatorObj = {
-  displayValue : '0',
-  firstValue : null,
-  waitState : false,
-  operator : null
-};
+// // Calculator object
+// const calculatorObj = {
+//   displayValue : '0',
+//   firstValue : null,
+//   waitState : false,
+//   operator : null
+// };
 
-// Declare a calculator class and operator levels.
+// Create a calculator from the calculator class and pass in operations.
 var operations = new Operations();
-var operatorItems = new OperatorItems(operations);
+var calculate = new Calculator(operations);
 
 
 
